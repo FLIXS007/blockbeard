@@ -1,0 +1,47 @@
+body{
+    background-image: url("../../public/asset/PageDeConnexion/fondInscription.png");
+}
+
+div{
+    background-color: #ae7764;
+    padding: 5vh;
+    border-radius:16px;
+    border: 3px solid #080e09;
+
+}
+
+.bouton-valider {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+h1 img {
+    width: 250px;
+    height: auto;
+}
+
+.lien-action {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.bouton-envoyer {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.bouton-envoyer img {
+    display: block;
+}
+
+.page-oubli .bouton-envoyer img,
+.page-oubli .lien-action img {
+    width: 208px;
+    height: auto;
+    display: block;
+}

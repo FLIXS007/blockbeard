@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/ui/styleConnexion.css">
+    <link rel="stylesheet" href="src/ui/styleInscription.css">
+    <title>BlockBeard - Inscription</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js" defer></script>
+    <script src="src/ui/inscription.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1><img src="public/asset/PageDeConnexion/InscriptionTEXTE.png" alt="Inscription"></h1>
+        <form id="form-inscription">
+    <label>
+        <span class="visuellement-cache">Pseudo</span>
+        <input type="text" name="pseudo" placeholder="Ton nom de joueur" required>
+    </label>
+    <label>
+        <span class="visuellement-cache">Mail</span>
+        <input type="email" name="email" placeholder="Mail" required>
+    </label>
+    <label>
+        <span class="visuellement-cache">Mot de passe</span>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+    </label>
+    <button type="submit" class="bouton-valider">
+        <img src="public/asset/PageDeConnexion/BoutonValider.png" alt="Valider">
+    </button>
+    </form>
+        <a class="lien-action" href="pageconnexion.html"><img src="public/asset/PageDeConnexion/BoutonRetour.png" alt="Retour"/></a>
+        <p id="message-inscription"></p>
+    </div>
+</body>
+</html>

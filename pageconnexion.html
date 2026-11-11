@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/ui/styleConnexion.css">
+    <title>BlockBeard - Connexion</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js" defer></script>
+    <script src="src/ui/connexion.js" defer></script>
+</head>
+<body>
+      <div>
+        <h1><img src="public/asset/PageDeConnexion/ConnexionTEXTE.png" alt="Connexion"></h1>
+        <form id="form-connexion">
+    <label>
+        <span class="visuellement-cache">Mail</span>
+        <input type="email" name="email" placeholder="Mail" required>
+    </label>
+    <label>
+        <span class="visuellement-cache">Mot de passe</span>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+    </label>
+    <button type="submit" class="bouton-connexion">
+        <img src="public/asset/PageDeConnexion/BoutonConnexion.png" alt="Connexion">
+    </button>
+    </form>
+        <a class="lien-action" href="inscription.html"><img src="public/asset/PageDeConnexion/BoutonInscription.png" alt="Inscription"/></a>
+        <a class="lien-action" href="mot-de-passe-oublie.html"><img src="public/asset/PageDeConnexion/BoutonLogin.png" alt="Login Oublié"/></a> 
+        <p id="message-connexion"></p>
+    </div>
+</body>
+</html>
