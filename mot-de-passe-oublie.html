@@ -10,11 +10,18 @@
 <body class="page-oubli">
     <div>
         <h1><img src="public/asset/PageDeConnexion/LoginTEXTE.png" alt="Login Oublié"></h1>
-        <form>
-            <label> <span class="visuellement-cache">Mail</span><input type="email" name="email" placeholder="Mail" required ></label>
-            <button type="submit" class="bouton-envoyer"><img src="public/asset/PageDeConnexion/BoutonEnvoyer.png" alt="Envoyer" /></button>
+        <form id="form-oubli">
+            <label>
+                <span class="visuellement-cache">Mail</span>
+                <input type="email" name="email" placeholder="Mail" required>
+            </label>
+
+            <button type="submit" class="bouton-envoyer">
+                <img src="public/asset/PageDeConnexion/BoutonEnvoyer.png" alt="Envoyer" />
+            </button>
         </form>
         <a class="lien-action" href="pageconnexion.html"><img src="public/asset/PageDeConnexion/BoutonRetour.png" alt="Retour"/></a>
-     </div>
+        <p id="message-oubli"></p>
+    </div>
 </body>
 </html>
