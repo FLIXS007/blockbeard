@@ -1,0 +1,7 @@
+# Copier ce fichier vers "application-local.properties" dans le meme dossier
+# et renseigner les vrais identifiants Supabase (Session Pooler recommande en IPv4).
+# ATTENTION : Ne jamais commiter "application-local.properties" !
+
+spring.datasource.url=jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres
+spring.datasource.username=postgres.qpdgstldpatahxfzexsl
+spring.datasource.password=REMPLACER_PAR_LE_MOT_DE_PASSE_BDD
