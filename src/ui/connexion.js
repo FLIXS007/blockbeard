@@ -1,26 +1,41 @@
+const API_AUTH_URL = "http://localhost:8080/api/auth";
+
 const formulaire = document.querySelector("#form-connexion");
 const message = document.querySelector("#message-connexion");
 
 formulaire.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const email = formulaire.elements.email.value;
+    const email = formulaire.elements.email.value.trim();
     const password = formulaire.elements.password.value;
 
     message.textContent = "Tentative de connexion...";
 
-    const { data, error } =
-        await supabaseClient.auth.signInWithPassword({
-            email: email,
-            password: password
+    try {
+        const reponse = await fetch(`${API_AUTH_URL}/connexion`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
         });
 
-    if (error) {
-        message.textContent = "Identifiants incorrects.";
-        console.error(error);
-        return;
-    }
+        if (!reponse.ok) {
+            const erreurTexte = await reponse.text();
+            message.textContent = erreurTexte || "Identifiants incorrects.";
+            return;
+        }
 
-    message.textContent = "Connexion réussie !";
-    console.log("Utilisateur connecté :", data.user);
+        const joueur = await reponse.json();
+        localStorage.setItem("joueurConnecte", JSON.stringify(joueur));
+
+        message.textContent = `Connexion réussie ! Bonjour ${joueur.nomJoueur}`;
+        console.log("Utilisateur connecté :", joueur);
+    } catch (erreur) {
+        message.textContent = "Impossible de joindre le serveur Spring Boot.";
+        console.error(erreur);
+    }
 });

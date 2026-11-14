@@ -1,33 +1,42 @@
+const API_AUTH_URL = "http://localhost:8080/api/auth";
+
 const formulaire = document.querySelector("#form-inscription");
 const message = document.querySelector("#message-inscription");
 
 formulaire.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const pseudo = formulaire.elements.pseudo.value;
-    const email = formulaire.elements.email.value;
+    const pseudo = formulaire.elements.pseudo.value.trim();
+    const email = formulaire.elements.email.value.trim();
     const password = formulaire.elements.password.value;
 
     message.textContent = "Création du compte...";
 
-    const { data, error } = await supabaseClient.auth.signUp({
-        email: email,
-        password: password,
-        options: {
-            data: {
-                pseudo: pseudo
-            }
+    try {
+        const reponse = await fetch(`${API_AUTH_URL}/inscription`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                pseudo: pseudo,
+                email: email,
+                password: password
+            })
+        });
+
+        if (!reponse.ok) {
+            const erreurTexte = await reponse.text();
+            message.textContent = erreurTexte || "Erreur lors de l'inscription.";
+            return;
         }
-    });
 
-    if (error) {
-        message.textContent = error.message;
-        console.error(error);
-        return;
+        const joueur = await reponse.json();
+        message.textContent = `Compte créé ! Bienvenue ${joueur.nomJoueur}.`;
+        formulaire.reset();
+        console.log("Utilisateur créé :", joueur);
+    } catch (erreur) {
+        message.textContent = "Impossible de joindre le serveur Spring Boot.";
+        console.error(erreur);
     }
-
-    message.textContent =
-        "Compte créé. Vérifie ton adresse e-mail si une confirmation est demandée.";
-
-    console.log("Utilisateur créé :", data.user);
 });
