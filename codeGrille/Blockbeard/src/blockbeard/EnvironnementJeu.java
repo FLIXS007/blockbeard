@@ -20,6 +20,8 @@ public class EnvironnementJeu {
     
     public Bloc[][] grille;
     private double delaiChute; //Cette valeur sera utile pour le mode arcade
+    private int scoreActuel ; 
+    int blocDetruit = 0  ; 
     
     private final int nbColonnes, nbLignes;
 
@@ -43,6 +45,7 @@ public class EnvironnementJeu {
         }
 
         this.delaiChute = 1.0;
+        this.scoreActuel =  0;
     }
     
     /*
@@ -169,6 +172,7 @@ public class EnvironnementJeu {
         TypeBloc blocActuelType = bloc.getType();
         
         this.grille[bloc.getOrdonnee()][bloc.getAbscisse()] = null;
+        this.blocDetruit += 1 ;
       
         
         if(ordonneeActuelle != nbLignes-1 && grille[ordonneeActuelle+1][abscisseActuelle] != null && grille[ordonneeActuelle+1][abscisseActuelle].getType() == blocActuelType){
@@ -193,6 +197,46 @@ public class EnvironnementJeu {
             }
         }
     }
+    
+
+    /*
+    *Cette méthode calcule et met à jour le score du joueur en fonction du nombre de bloc detruits
+    *
+    *@author DJOLOLO Daryl
+    */
+    public void miseAJourScore(){
+        int pointsGagnes = 0 ;
+        double multiplicateur = 1 ;
+        
+        if(this.blocDetruit >= 3){
+            multiplicateur = this.blocDetruit * 0.5 ;
+            scoreActuel += (int) (10  * blocDetruit) * multiplicateur ;
+        }
+        else {
+            scoreActuel += (int) (10  * blocDetruit)  ;
+        }
+        
+        this.blocDetruit = 0 ;
+    } 
+    
+    
+    /*
+    *Cette méthode va détruire les blocs de même couleur et mettre à jour le score
+    *
+    *@author DJOLOLO Daryl
+    */
+    public void destructionCombo(Bloc bloc){
+        destructionConsecutive(bloc);
+        miseAJourScore(); 
+    }
+            
+    
+    
+    
+    public int getScoreActuel() {
+        return scoreActuel;
+    }
+    
     
     
     /*
@@ -229,8 +273,11 @@ public class EnvironnementJeu {
                     affichage += "N\t";
             }
             affichage += "\n";
+            
         }
-
+        affichage += "\n";
+        affichage += "Score : " + this.scoreActuel + " points !";
+        affichage += "\n";
         return affichage;
     }
     

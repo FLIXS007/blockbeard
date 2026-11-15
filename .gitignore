@@ -8,3 +8,6 @@ out/
 ### Systeme ###
 .DS_Store
 Thumbs.db
+/codeGrille/Blockbeard/nbproject/private/
+/codeGrille/Blockbeard/build/
+/codeGrille/Blockbeard/dist/

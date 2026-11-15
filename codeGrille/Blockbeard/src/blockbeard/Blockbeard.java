@@ -17,10 +17,10 @@ public class Blockbeard {
         
         //TESTS
         
-        /*
+        
         EnvironnementJeu jeu = new EnvironnementJeu(4, 4);
         System.out.println(jeu);
-        //jeu.creerBloc();
+        jeu.creerBloc();
         jeu.grille[0][0] = new Bloc(0, 0, TypeBloc.Bleu);
         System.out.println(jeu);
         jeu.chuteBloc(jeu.grille[0][0]);
@@ -42,9 +42,25 @@ public class Blockbeard {
         jeu.grille[0][1] = new Bloc(1, 0, TypeBloc.Rouge);
         jeu.grille[1][1] = new Bloc(1, 1, TypeBloc.Rouge);
         System.out.println(jeu);
-        jeu.destructionConsecutive(jeu.grille[3][1]);
+        jeu.destructionCombo(jeu.grille[3][1]);
         System.out.println(jeu);
-        */
+        for(int i = 1; i<4; i++){
+            jeu.grille[3][i] = new Bloc(i, 3, TypeBloc.Bleu);
+        }
+        for(int j = 1; j<2; j++){
+            jeu.grille[j][1] = new Bloc(1, j, TypeBloc.Bleu);
+        }
+        System.out.println(jeu);
+        
+        jeu.destructionCombo(jeu.grille[3][1]);
+        System.out.println(jeu);
+        
+        for(int j = 1; j<2; j++){
+            jeu.grille[j][1] = new Bloc(1, j, TypeBloc.Bleu);
+        }
+        System.out.println(jeu);
+        jeu.destructionCombo(jeu.grille[1][1]);
+        System.out.println(jeu);
     }
     
 }
