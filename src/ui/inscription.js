@@ -26,8 +26,9 @@ formulaire.addEventListener("submit", async (event) => {
         });
 
         if (!reponse.ok) {
-            const erreurTexte = await reponse.text();
-            message.textContent = erreurTexte || "Erreur lors de l'inscription.";
+            const erreurData = await reponse.json().catch(() => null);
+            message.textContent =
+                (erreurData && erreurData.message) || "Erreur lors de l'inscription.";
             return;
         }
 

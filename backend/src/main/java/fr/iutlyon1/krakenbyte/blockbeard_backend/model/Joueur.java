@@ -28,6 +28,9 @@ public class Joueur {
     @Column(name = "auth_user_id", unique = true)
     private UUID authUserId;
 
+    @Column(name = "\"motDePasse\"")
+    private String motDePasse;
+
     public Joueur(){
     }
 
@@ -62,6 +65,10 @@ public class Joueur {
         return authUserId;
     }
 
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
     public void setNomJoueur(String nomJoueur) {
         this.nomJoueur = nomJoueur;
     }
@@ -80,5 +87,9 @@ public class Joueur {
 
     public void setAuthUserId(UUID authUserId) {
         this.authUserId = authUserId;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
     }
 }
