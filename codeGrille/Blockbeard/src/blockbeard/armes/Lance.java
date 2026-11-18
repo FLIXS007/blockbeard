@@ -1,0 +1,53 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package blockbeard.armes;
+
+import blockbeard.Bloc;
+import blockbeard.Direction;
+import blockbeard.EnvironnementJeu;
+import blockbeard.TypeBloc;
+
+/**
+ *
+ * @author ddjol
+ */
+public class Lance implements Arme {
+    private int degats = 20;
+    private Direction dir = Direction.gauche;
+
+    @Override
+    public void attaquer(Bloc blocADetruire, EnvironnementJeu jeu) {
+        if (blocADetruire != null) {
+            int derriere = 1;    
+            if (this.dir == Direction.gauche) {
+                derriere = -1;
+            }
+            int abscisseDerriere = blocADetruire.getAbscisse() + derriere;
+            int ordonneeDerriere = blocADetruire.getOrdonnee();
+
+            blocADetruire.setPtsVie(blocADetruire.getPtsVie() - this.degats);
+            if (blocADetruire.getPtsVie() <= 0) {
+                jeu.destructionCombo(blocADetruire ) ;              
+            }
+
+            
+            //On vérifie que le bloc derrière est bien dans la grille
+            if (abscisseDerriere >= 0 && abscisseDerriere < jeu.grille[0].length) {
+                Bloc blocDerriere = jeu.grille[ordonneeDerriere][abscisseDerriere];        
+                if (blocDerriere != null) {
+                    blocDerriere.setPtsVie(blocDerriere.getPtsVie() - this.degats);
+                    
+                    if (blocDerriere.getPtsVie() <= 0) {
+                        jeu.destructionCombo(blocDerriere ) ;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

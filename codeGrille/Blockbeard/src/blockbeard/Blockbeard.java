@@ -4,6 +4,9 @@
  */
 package blockbeard;
 
+import blockbeard.armes.Epee;
+import blockbeard.armes.Lance;
+
 /**
  *
  * @author yanis
@@ -17,7 +20,7 @@ public class Blockbeard {
         
         //TESTS
         
-        
+        /*
         EnvironnementJeu jeu = new EnvironnementJeu(4, 4);
         System.out.println(jeu);
         jeu.creerBloc();
@@ -61,6 +64,53 @@ public class Blockbeard {
         System.out.println(jeu);
         jeu.destructionCombo(jeu.grille[1][1]);
         System.out.println(jeu);
+        
+        */
+        
+        /* TEST ARMES */
+        
+        EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
+        System.out.println(jeu2);
+        jeu2.grille[0][0] = new Bloc(0, 0, TypeBloc.Bleu);
+        jeu2.grille[1][0] = new Bloc(0, 1, TypeBloc.Bleu);
+        jeu2.grille[2][0] = new Bloc(0, 2, TypeBloc.Bleu);
+        jeu2.grille[3][0] = new Bloc(0, 3, TypeBloc.Bleu);
+        jeu2.grille[3][1] = new Bloc(1, 3, TypeBloc.Rouge);
+        Lance lance = new Lance();
+        Epee epee = new Epee() ;
+        System.out.println(jeu2);
+        
+        
+        lance.attaquer(jeu2.grille[3][1], jeu2);   
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        
+        /*
+        epee.attaquer(jeu2.grille[3][0], jeu2);   
+        epee.attaquer(jeu2.grille[3][0], jeu2);  
+        epee.attaquer(jeu2.grille[3][0], jeu2);  
+        epee.attaquer(jeu2.grille[3][0], jeu2);  
+        epee.attaquer(jeu2.grille[3][0], jeu2); */
+        System.out.println(jeu2);
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
