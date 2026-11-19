@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/ui/styleAccueil.css">
+    <title>BlockBeard - Accueil</title>
+    <script src="src/ui/accueil.js" defer></script>
+</head>
+<body>
+    <main class="scene-jeu">
+        <video class="fond-video" autoplay muted loop playsinline> <source src="public/asset/PageAccueil/FondVideo.mp4" type="video/mp4"></video>
+        <img class="logo-jeu" src="public/asset/PageAccueil/LogoBlockBeard.png" alt="BlockBeard">
+        
+        <nav class="menu-principal" aria-label="Menu principal">
+            <a class="bouton-menu" href="arcade.html"><img src="public/asset/PageAccueil/boutonArcade.png" alt="Mode Arcade"></a>
+            <a class="bouton-menu" href="communautaire.html"><img src="public/asset/PageAccueil/boutonCommunautaire.png" alt="Mode Communautaire"></a>
+            <a class="bouton-menu" href="boutique.html"><img src="public/asset/PageAccueil/boutonBoutique.png" alt="Boutique"  > </a>
+        </nav>
+
+         <nav class="menu-joueur" aria-label="Menu du joueur">
+            <button class="bouton-icone" type="button" id="bouton-Parametre"><img src="public/asset/PageAccueil/IconePara.png" alt="Ouvrir l'Parametre" ></button>
+            <button class="bouton-icone" type="button" id="bouton-Calendrier"><img src="public/asset/PageAccueil/iconeCalendrier.png" alt="Ouvrir l'Bonus Journalier" ></button>
+            <button class="bouton-icone" type="button" id="bouton-Deco"><img src="public/asset/PageAccueil/IconeDeconnexion.png" alt="Se deconnecter" ></button>
+        </nav>
+
+    </main>
+    
+</body>
+</html>

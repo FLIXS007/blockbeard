@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    background-color: #1c1820;
+}
+
+.scene-jeu {
+    position: relative;
+
+    width: min(100vw, calc(100vh * 16 / 9));
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+    background-color: #ddc69f;
+}
+
+.fond-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.logo-jeu {
+    position: absolute;
+
+    top: 30%;
+    left: 50%;
+
+    width: 48%;
+    height: auto;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+    image-rendering: pixelated;
+}
+
+.menu-principal {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 29%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+}
+
+.bouton-menu {
+    display: block;
+    width: 100%;
+
+    transition:
+        transform 120ms ease,
+        filter 120ms ease;
+}
+
+.bouton-menu img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    image-rendering: pixelated;
+}
+
+.bouton-menu:hover {
+    transform: scale(1.05);
+    filter: brightness(1.12);
+}
+
+.bouton-menu:active {
+    transform: scale(0.96);
+}
+
+.bouton-menu:focus-visible {
+    outline: 3px solid #ffe08a;
+    outline-offset: 4px;
+}
+
+.menu-joueur {
+    position: absolute;
+
+    top: 5%;
+    right: 3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    z-index: 2;
+}
+
+.bouton-icone {
+    width: 36px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition:
+        transform 120ms ease,
+        filter 120ms ease;
+}
+
+.bouton-icone img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    image-rendering: pixelated;
+}
+
+.bouton-icone:hover {
+    transform: scale(1.15);
+    filter: brightness(1.15);
+}
+
+.bouton-icone:active {
+    transform: scale(0.9);
+}
+
+.bouton-icone:focus-visible {
+    outline: 3px solid #ffe08a;
+    outline-offset: 3px;
+}
