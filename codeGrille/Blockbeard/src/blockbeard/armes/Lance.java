@@ -10,7 +10,7 @@ import blockbeard.EnvironnementJeu;
 import blockbeard.TypeBloc;
 
 /**
- *
+ *La lance inflige des dégats aux 2 prochais blocs dans la direction du joueur
  * @author ddjol
  */
 public class Lance implements Arme {
@@ -24,14 +24,14 @@ public class Lance implements Arme {
             if (this.dir == Direction.gauche) {
                 derriere = -1;
             }
-            int abscisseDerriere = blocADetruire.getAbscisse() + derriere;
-            int ordonneeDerriere = blocADetruire.getOrdonnee();
-
+            int abscisseDerriere = blocADetruire.getAbscisse() + derriere ;
+            int ordonneeDerriere = blocADetruire.getOrdonnee() ;
+            
+            //Les 2 blocs se détruisent L'UN APRES L'AUTRE pas en même temps
             blocADetruire.setPtsVie(blocADetruire.getPtsVie() - this.degats);
             if (blocADetruire.getPtsVie() <= 0) {
                 jeu.destructionCombo(blocADetruire ) ;              
             }
-
             
             //On vérifie que le bloc derrière est bien dans la grille
             if (abscisseDerriere >= 0 && abscisseDerriere < jeu.grille[0].length) {
@@ -49,5 +49,6 @@ public class Lance implements Arme {
         }
 
     }
+    
 
 }

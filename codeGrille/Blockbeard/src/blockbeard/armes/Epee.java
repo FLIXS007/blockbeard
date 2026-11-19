@@ -10,8 +10,7 @@ import blockbeard.EnvironnementJeu;
 import blockbeard.armes.Arme;
 
 /**
- * Patron de conception Stratégie, cette interface sera implementée par toutes les classes des armes du jeu
- * qui redéfiniront la méthode attaquer()
+ * 
  * @author ddjol
  */
 public class Epee implements Arme{
