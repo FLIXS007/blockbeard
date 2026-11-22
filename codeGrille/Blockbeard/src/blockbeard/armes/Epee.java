@@ -13,9 +13,22 @@ import blockbeard.armes.Arme;
  * 
  * @author ddjol
  */
-public class Epee implements Arme{
-    private final int degats = 20 ;
+public class Epee extends Arme{
 
+    public Epee() {
+        super();
+        degats = 20 ; 
+        int prixPiece = 0 ;
+        int prixGemme = 0 ;
+        boolean debloque = true ;
+        boolean equipee = true ;
+                
+                
+    }
+    
+    
+    
+    
     @Override
     public void attaquer(Bloc blocADetruire, EnvironnementJeu jeu) {
         if (blocADetruire != null) {

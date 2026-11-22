@@ -13,8 +13,52 @@ import blockbeard.EnvironnementJeu;
  * qui redéfiniront la méthode attaquer()
  * @author ddjol
  */
-public interface Arme {
+public abstract class Arme {
+    protected int degats ;
+    protected int prixPiece, prixGemme ;
+    protected boolean debloque  ;
+    protected boolean equipee  ;
+
+    public Arme() {
+        this.debloque = false;
+        this.equipee = false;
+    }
+    
+
     /*Prend en paramètre la position du joueur*/
-    public void attaquer(Bloc blocADetruire, EnvironnementJeu jeu ) ;
+    public abstract void attaquer(Bloc blocADetruire, EnvironnementJeu jeu ) ;
+    
+    
+    public int getPrixPiece() {
+        return this.prixPiece;
+    }
+
+    public int getPrixGemme() {
+        return this.prixGemme;
+    }
+
+    public void setDebloque(boolean debloque) {
+        this.debloque = debloque;
+    }
+
+    public boolean isEquipee() {
+        return equipee;
+    }
+    
+
+    public void setEquipee(boolean equipee) {
+        this.equipee = equipee;
+    }
+    
+    
+
+    public boolean isDebloque() {
+        return debloque;
+    }
+    
+    
+    
+    
+    
     
 }

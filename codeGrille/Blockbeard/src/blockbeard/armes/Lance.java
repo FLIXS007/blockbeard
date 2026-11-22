@@ -13,8 +13,10 @@ import blockbeard.TypeBloc;
  *La lance inflige des dégats aux 2 prochais blocs dans la direction du joueur
  * @author ddjol
  */
-public class Lance implements Arme {
-    private int degats = 20;
+public class Lance extends Arme {
+    private final int degats = 20;
+    private final int prixPiece = 250 ;
+    private final int prixGemme = 100 ;
     private Direction dir = Direction.gauche;
 
     @Override
