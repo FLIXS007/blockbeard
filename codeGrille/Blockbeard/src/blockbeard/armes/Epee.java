@@ -21,9 +21,7 @@ public class Epee extends Arme{
         int prixPiece = 0 ;
         int prixGemme = 0 ;
         boolean debloque = true ;
-        boolean equipee = true ;
-                
-                
+         
     }
     
     

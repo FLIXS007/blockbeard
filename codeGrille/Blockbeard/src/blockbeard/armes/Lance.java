@@ -14,10 +14,17 @@ import blockbeard.TypeBloc;
  * @author ddjol
  */
 public class Lance extends Arme {
-    private final int degats = 20;
-    private final int prixPiece = 250 ;
-    private final int prixGemme = 100 ;
     private Direction dir = Direction.gauche;
+    
+    public Lance() {
+        super();
+        degats = 20 ; 
+        this.prixPiece = 250 ;
+        this.prixGemme = 00 ;
+         
+    }
+    
+    
 
     @Override
     public void attaquer(Bloc blocADetruire, EnvironnementJeu jeu) {

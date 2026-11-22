@@ -23,7 +23,6 @@ public class EnvironnementJeu {
     private int scoreActuel = 0 ; 
     private int gemmeGagnees = 0;
     private int pieceGagnee ;
-    private PorteMonnaiePiece piece = new PorteMonnaiePiece() ;
     int blocDetruit = 0  ; 
     
     private final int nbColonnes, nbLignes;
@@ -241,11 +240,11 @@ public class EnvironnementJeu {
     public int getScoreActuel() {
         return scoreActuel;
     }
+
     
     
-    public int calculerGemme(){
-        return (int) (this.scoreActuel * 0.2) ;
-    }
+    
+    
     
     
     
@@ -292,7 +291,6 @@ public class EnvironnementJeu {
         affichage += "\n";
         affichage += "Score : " + this.scoreActuel + " points !";
         affichage += "\n";
-        affichage += "Pieces : " + this.piece ;
         affichage += "\n";
         return affichage;
     }

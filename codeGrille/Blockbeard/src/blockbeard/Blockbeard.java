@@ -67,7 +67,7 @@ public class Blockbeard {
         
         */
         
-        /* TEST ARMES */
+        /* TEST ARMES ET PORTE MONNAIE*/
         
         EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
         System.out.println(jeu2);
@@ -91,17 +91,24 @@ public class Blockbeard {
         jeu2.grille[2][1] = new Bloc(1, 2, TypeBloc.Rouge);
         jeu2.grille[3][1] = new Bloc(1, 3, TypeBloc.Rouge);
         
-       
+        Personnage perso = new Personnage() ;
         Lance lance = new Lance();
         Epee epee = new Epee() ;
+        perso.getPieces().setSoldePiece(500);
+        System.out.println(perso.getPieces().getSoldePiece());
+        perso.getPieces().acheterArme(perso, lance);
         System.out.println(jeu2);
         
         
-        lance.attaquer(jeu2.grille[3][1], jeu2);   
-        lance.attaquer(jeu2.grille[3][1], jeu2);  
-        lance.attaquer(jeu2.grille[3][1], jeu2);  
-        lance.attaquer(jeu2.grille[3][1], jeu2);  
-        lance.attaquer(jeu2.grille[3][1], jeu2); 
+        
+        
+        
+        
+        perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);   
+        perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
+        perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
+        perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
+        perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2); 
         
         
         

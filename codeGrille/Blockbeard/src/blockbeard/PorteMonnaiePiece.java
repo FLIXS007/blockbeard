@@ -51,12 +51,12 @@ public class PorteMonnaiePiece {
     
  
     
-    public void acheterArme(Arme armeAchetee){
-        if (armeAchetee.isEquipee() || !armeAchetee.isDebloque() ||!depenserPiece(armeAchetee.getPrixPiece())) {   
-            System.out.println("Achat échoué !");
+    public void acheterArme(Personnage perso ,Arme armeAchetee){
+        if ( !armeAchetee.isDebloque() ||!depenserPiece(armeAchetee.getPrixPiece())) {   
+            System.out.println("Achat echoue !");
         }
         else{
-            armeAchetee.setEquipee(true);
+             perso.setArmeEquipee(armeAchetee);
         }
     }
 

@@ -17,11 +17,9 @@ public abstract class Arme {
     protected int degats ;
     protected int prixPiece, prixGemme ;
     protected boolean debloque  ;
-    protected boolean equipee  ;
 
     public Arme() {
         this.debloque = false;
-        this.equipee = false;
     }
     
 
@@ -41,20 +39,19 @@ public abstract class Arme {
         this.debloque = debloque;
     }
 
-    public boolean isEquipee() {
-        return equipee;
-    }
-    
-
-    public void setEquipee(boolean equipee) {
-        this.equipee = equipee;
-    }
     
     
 
     public boolean isDebloque() {
         return debloque;
     }
+
+    @Override
+    public String toString() {
+        return  "degats : " + degats + "\n debloque : " + debloque  ;
+    }
+    
+    
     
     
     
