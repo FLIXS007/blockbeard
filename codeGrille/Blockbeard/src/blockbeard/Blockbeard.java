@@ -73,8 +73,8 @@ public class Blockbeard {
         /*
         /* TEST ARMES ET PORTE MONNAIE*/
         
-        EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
-        System.out.println(jeu2);
+        //EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
+        //System.out.println(jeu2);
         
         /*
         jeu2.grille[3][0] = new Bloc(0, 3, TypeBloc.Bleu);

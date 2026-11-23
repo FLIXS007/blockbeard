@@ -64,16 +64,10 @@ public class Personnage {
         this.direction = direction;
     }
     
-    public void setArmeEquipee(Arme armeEquipee) {
-        this.armeEquipee = armeEquipee;
-    }
     public PorteMonnaiePiece getPieces() {
         return pieces;
     }
-    
-    
-
-    
+     
     
     public void seDeplacer(){
         
