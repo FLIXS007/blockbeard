@@ -4,8 +4,10 @@
  */
 package blockbeard;
 
+import BlockbeardVue.FenetrePartie;
 import blockbeard.armes.Epee;
 import blockbeard.armes.Lance;
+import blockbeard.mouvementPersonnage.controleurPersonnage;
 
 /**
  *
@@ -67,10 +69,12 @@ public class Blockbeard {
         
         */
         
+        /* TEST ARMES */
+        /*
         /* TEST ARMES ET PORTE MONNAIE*/
         
-        EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
-        System.out.println(jeu2);
+        //EnvironnementJeu jeu2 = new EnvironnementJeu(4, 4);
+        //System.out.println(jeu2);
         
         /*
         jeu2.grille[3][0] = new Bloc(0, 3, TypeBloc.Bleu);
@@ -78,7 +82,9 @@ public class Blockbeard {
         jeu2.grille[2][0] = new Bloc(0, 2, TypeBloc.Rouge);
         jeu2.grille[2][1] = new Bloc(1, 2, TypeBloc.Bleu);
         jeu2.grille[2][1] = new Bloc(1, 2, TypeBloc.Bleu);
+
         */
+        /*
         
         
         
@@ -90,6 +96,8 @@ public class Blockbeard {
         jeu2.grille[1][1] = new Bloc(1, 1, TypeBloc.Rouge);
         jeu2.grille[2][1] = new Bloc(1, 2, TypeBloc.Rouge);
         jeu2.grille[3][1] = new Bloc(1, 3, TypeBloc.Rouge);
+        */
+        /*
         
         Personnage perso = new Personnage() ;
         Lance lance = new Lance();
@@ -100,16 +108,22 @@ public class Blockbeard {
         System.out.println(jeu2);
         
         
+        lance.attaquer(jeu2.grille[3][1], jeu2);   
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2);  
+        lance.attaquer(jeu2.grille[3][1], jeu2); 
+        */
         
         
         
-        
+        /*
         perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);   
         perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
         perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
         perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2);  
         perso.getArmeEquipee().attaquer(jeu2.grille[3][1], jeu2); 
-        
+        */
         
         
         
@@ -120,11 +134,25 @@ public class Blockbeard {
         epee.attaquer(jeu2.grille[3][0], jeu2);  
         epee.attaquer(jeu2.grille[3][0], jeu2);  
         epee.attaquer(jeu2.grille[3][0], jeu2); */
-        System.out.println(jeu2);
+        //System.out.println(jeu2);
 
+        /*
+        Personnage personnage = new Personnage(1,0);
+        EnvironnementJeu jeu = new EnvironnementJeu(4, 4, personnage);
+        controleurPersonnage c = new controleurPersonnage(jeu);
+        jeu.grille[3][0] = new Bloc(0, 3, TypeBloc.Bleu);
+        jeu.grille[3][3] = new Bloc(3, 3, TypeBloc.Bleu);
+        jeu.grille[3][2] = new Bloc(2, 3, TypeBloc.Bleu);
+        jeu.grille[2][2] = new Bloc(2, 2, TypeBloc.Bleu);
+        jeu.grille[1][2] = new Bloc(2, 1, TypeBloc.Bleu);
+        jeu.grille[0][2] = new Bloc(2, 1, TypeBloc.Bleu);
         
-        
-       
+        jeu.grille[3][1] = new Bloc(1, 3, TypeBloc.Bleu);
+        jeu.grille[2][1] = new Bloc(1, 2, TypeBloc.Bleu);
+        jeu.grille[1][1] = new Bloc(1, 1, TypeBloc.Bleu);
+        System.out.println(jeu);
+        FenetrePartie f = new FenetrePartie(c, "titre");
+       */
         
         
         

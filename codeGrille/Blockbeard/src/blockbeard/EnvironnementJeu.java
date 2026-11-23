@@ -19,6 +19,7 @@ Il est nécessaire de tester ces fonctions seules.
 public class EnvironnementJeu {
     
     public Bloc[][] grille;
+    private Personnage personnageJoueur;
     private double delaiChute; //Cette valeur sera utile pour le mode arcade
     private int scoreActuel = 0 ; 
     private int gemmeGagnees = 0;
@@ -35,11 +36,12 @@ public class EnvironnementJeu {
     *@params nbLignes le nombre de lignes de la grille
     *@author ADDADI Yanis
     */
-    public EnvironnementJeu(int nbColonnes, int nbLignes) {
+    public EnvironnementJeu(int nbColonnes, int nbLignes, Personnage personnageJoueur) {
         
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
         this.grille = new Bloc[nbLignes][nbColonnes];
+        this.personnageJoueur = personnageJoueur;
         
         for(int i = 0; i< nbLignes; i++){
             for(int j = 0; j < nbColonnes; j++)
@@ -251,7 +253,6 @@ public class EnvironnementJeu {
     
     
     
-    
     /*
     *Cette méthode permet d'afficher la grille :
     *   N signifie que la case de la grille est vide
@@ -282,6 +283,10 @@ public class EnvironnementJeu {
                             affichage += "V\t";        
                     }    
                 }
+                else if(i == personnageJoueur.getOrdonnee() && j == personnageJoueur.getAbscisse()){
+                    affichage += "P\t";
+                }
+                
                 else
                     affichage += "N\t";
             }
@@ -294,5 +299,23 @@ public class EnvironnementJeu {
         affichage += "\n";
         return affichage;
     }
+
+    public int getNbColonnes() {
+        return nbColonnes;
+    }
+
+    public int getNbLignes() {
+        return nbLignes;
+    }
+    
+    public Bloc getCase(int abscisse, int ordonnee){
+        return grille[ordonnee][abscisse];
+    }
+
+    public Personnage getPersonnageJoueur() {
+        return personnageJoueur;
+    }
+    
+    
     
 }

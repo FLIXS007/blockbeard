@@ -19,13 +19,15 @@ public class Personnage {
 
     
     
-    public Personnage() {
+    public Personnage(int abscisse, int ordonnee) {
         this.armeEquipee = new Epee();
-        this.abscisse = 0;
-        this.ordonnee = 0;
+        this.abscisse = abscisse;
+        this.ordonnee = ordonnee;
         this.pieces = new PorteMonnaiePiece() ;
         this.direction = Direction.droite ;
     }
+    
+    
 
     public Arme getArmeEquipee() {
         return armeEquipee;
@@ -50,13 +52,22 @@ public class Personnage {
         return direction;
     }
 
+    public void setAbscisse(int abscisse) {
+        this.abscisse = abscisse;
+    }
+
+    public void setOrdonnee(int ordonnee) {
+        this.ordonnee = ordonnee;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+    
     public PorteMonnaiePiece getPieces() {
         return pieces;
     }
-    
-    
-
-    
+     
     
     public void seDeplacer(){
         
