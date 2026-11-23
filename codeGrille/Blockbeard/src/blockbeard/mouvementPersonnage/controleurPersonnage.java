@@ -93,6 +93,16 @@ public class controleurPersonnage implements KeyListener{
                     personnageJoueur.setAbscisse(abscisse);
                 }
                 personnageJoueur.setDirection(Direction.droite);
+                break ;
+                
+            case KeyEvent.VK_E :
+                if(personnageJoueur.getDirection()== Direction.droite && personnageJoueur.getAbscisse()+1 < environnement.getNbColonnes()) {
+                    personnageJoueur.getArmeEquipee().attaquer(environnement.grille[personnageJoueur.getOrdonnee()][personnageJoueur.getAbscisse()+1], environnement);
+                }
+                else if (personnageJoueur.getDirection()== Direction.gauche && personnageJoueur.getAbscisse()-1 >= 0 ){
+                    personnageJoueur.getArmeEquipee().attaquer(environnement.grille[personnageJoueur.getOrdonnee()][personnageJoueur.getAbscisse()-1], environnement);
+                }
+       
                  
         }
         

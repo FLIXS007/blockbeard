@@ -69,9 +69,6 @@ public class Personnage {
     }
      
     
-    public void seDeplacer(){
-        
-    }
     
     
 }
