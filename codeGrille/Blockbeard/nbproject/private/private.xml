@@ -3,11 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Blockbeard/src/BlockbeardVue/FenetrePartie.java</file>
             <file>file:/D:/Blockbeard/src/blockbeard/EnvironnementJeu.java</file>
             <file>file:/D:/Blockbeard/src/blockbeard/mouvementPersonnage/controleurPersonnage.java</file>
             <file>file:/D:/Blockbeard/src/blockbeard/Personnage.java</file>
             <file>file:/D:/Blockbeard/src/blockbeard/Blockbeard.java</file>
+=======
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/EnvironnementJeu.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/Bloc.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/Direction.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/Blockbeard.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/TypeBloc.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/armes/Arme.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/armes/Epee.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/Personnage.java</file>
+            <file>file:/F:/SAE%20S3/SAE_code/sae_s3_s4_g1/codeGrille/Blockbeard/src/blockbeard/armes/Lance.java</file>
+>>>>>>> 71f8976483b1d8fbddf6c4dc086adf24d6d1c64f
         </group>
     </open-files>
 </project-private>

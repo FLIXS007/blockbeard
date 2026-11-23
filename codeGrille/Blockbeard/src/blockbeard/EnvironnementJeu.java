@@ -21,7 +21,9 @@ public class EnvironnementJeu {
     public Bloc[][] grille;
     private Personnage personnageJoueur;
     private double delaiChute; //Cette valeur sera utile pour le mode arcade
-    private int scoreActuel ; 
+    private int scoreActuel = 0 ; 
+    private int gemmeGagnees = 0;
+    private int pieceGagnee ;
     int blocDetruit = 0  ; 
     
     private final int nbColonnes, nbLignes;
@@ -231,11 +233,24 @@ public class EnvironnementJeu {
         destructionConsecutive(bloc);
         miseAJourScore(); 
     }
+
+    public int getPieceGagnee() {
+        return pieceGagnee;
+    }
             
     
     public int getScoreActuel() {
         return scoreActuel;
     }
+
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     /*
@@ -280,6 +295,7 @@ public class EnvironnementJeu {
         }
         affichage += "\n";
         affichage += "Score : " + this.scoreActuel + " points !";
+        affichage += "\n";
         affichage += "\n";
         return affichage;
     }

@@ -15,6 +15,7 @@ public class Personnage {
     private Arme armeEquipee ;
     private int abscisse, ordonnee ;
     private Direction direction ;
+    private PorteMonnaiePiece pieces ;
 
     
     
@@ -22,6 +23,7 @@ public class Personnage {
         this.armeEquipee = new Epee();
         this.abscisse = abscisse;
         this.ordonnee = ordonnee;
+        this.pieces = new PorteMonnaiePiece() ;
         this.direction = Direction.droite ;
     }
     
@@ -31,10 +33,17 @@ public class Personnage {
         return armeEquipee;
     }
 
+    public void setArmeEquipee(Arme armeEquipee) {
+        this.armeEquipee = armeEquipee;
+    }
+    
+
+
     public int getAbscisse() {
         return abscisse;
     }
 
+    
     public int getOrdonnee() {
         return ordonnee;
     }
@@ -58,4 +67,17 @@ public class Personnage {
     public void setArmeEquipee(Arme armeEquipee) {
         this.armeEquipee = armeEquipee;
     }
+    public PorteMonnaiePiece getPieces() {
+        return pieces;
+    }
+    
+    
+
+    
+    
+    public void seDeplacer(){
+        
+    }
+    
+    
 }
