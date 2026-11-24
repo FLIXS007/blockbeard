@@ -35,6 +35,7 @@ formulaire.addEventListener("submit", async (event) => {
 
         message.textContent = `Connexion réussie ! Bonjour ${joueur.nomJoueur}`;
         console.log("Utilisateur connecté :", joueur);
+        window.location.href = "accueil.html";
     } catch (erreur) {
         message.textContent = "Impossible de joindre le serveur Spring Boot.";
         console.error(erreur);
