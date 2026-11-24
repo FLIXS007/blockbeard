@@ -1,4 +1,6 @@
-const API_AUTH_URL = "http://localhost:8080/api/auth";
+const API_AUTH_URL = window.location.port === "8080" || window.location.hostname.includes("onrender.com")
+    ? "/api/auth"
+    : "http://localhost:8080/api/auth";
 
 const formulaire = document.querySelector("#form-inscription");
 const message = document.querySelector("#message-inscription");
